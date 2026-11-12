@@ -1,0 +1,22 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>LLMSource Phase 3 Site</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+:root { --bg:#f6f6f6; --fg:#282828; --muted:#6b6b6b; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#f6f6f6; --fg:#282828; --muted:#6b6b6b; } }
+body { background:var(--bg); color:var(--fg); font-family:Inter, system-ui, sans-serif; padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px)); padding-block:48px; }
+p { margin:0 auto; max-width:40ch; text-align:center; color:var(--muted); }
+a { color:var(--fg); }
+</style>
+<p id="msg">Opening the LLMSource site… <a id="go" href="home.html">Open the homepage</a></p>
+<script>
+(function () {
+  var pages = { home: 'home', discover: 'discover', trust: 'trust', control: 'control', pricing: 'pricing', 'free-scan': 'free-scan' };
+  var key = (location.hash || '').replace('#', '');
+  var target = (pages[key] || 'home') + '.html';
+  document.getElementById('go').href = target;
+  location.replace(target);
+})();
+</script>
+
+</body></html>
