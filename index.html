@@ -11,12 +11,18 @@ a { color:var(--fg); }
 <p id="msg">Opening the LLMSource site… <a id="go" href="home.html">Open the homepage</a></p>
 <script>
 (function () {
-  var pages = { home: 'home', discover: 'discover', trust: 'trust', control: 'control', pricing: 'pricing', 'free-scan': 'free-scan' };
+  var pages = { home: 'home', discover: 'discover', trust: 'trust', control: 'control', pricing: 'pricing', 'free-scan': 'free-scan', smb: 'smb', agency: 'agency', business: 'business', enterprise: 'enterprise' };
   var key = (location.hash || '').replace('#', '');
+  if (!pages[key]) { try { key = localStorage.getItem('p3last') || ''; } catch (e) {} }
   var target = (pages[key] || 'home') + '.html';
   document.getElementById('go').href = target;
   location.replace(target);
 })();
 </script>
+
+
+
+
+
 
 </body></html>
